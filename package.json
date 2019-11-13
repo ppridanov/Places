@@ -1,0 +1,28 @@
+{
+  "name": "places",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ppridanov/Places.git"
+  },
+  "author": "Petr Pridanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ppridanov/Places/issues"
+  },
+  "homepage": "https://github.com/ppridanov/Places#readme",
+  "dependencies": {
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
