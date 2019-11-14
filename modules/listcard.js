@@ -1,4 +1,4 @@
-import {connection} from "./api.js";
+import {connection} from "../modules/api.js"
 import {placeList} from "./script.js";
 import Card from "./card.js";
 export default class ListCard {
@@ -29,4 +29,5 @@ export default class ListCard {
         })
     }
   }
+
   

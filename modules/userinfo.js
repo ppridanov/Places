@@ -1,4 +1,4 @@
-import {connection} from "./api.js"
+import {connection} from "../modules/api.js"
 export default class Userinfo {
     constructor() {
       connection.render()

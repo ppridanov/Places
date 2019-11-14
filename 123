@@ -1,0 +1,2 @@
+src="<%= htmlWebpackPlugin.files.chunks.main.entry %>">
+<%=htmlWebpackPlugin.files.chunks.main.css %>

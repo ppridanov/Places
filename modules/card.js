@@ -1,5 +1,5 @@
 import {placeList} from "./script.js"
-import {connection} from "./api.js"
+import {connection} from "../modules/api.js"
 export default class Card {
   constructor(name, link, id, ownerId) {
     this.cardContainer = this.create(name, link, id);

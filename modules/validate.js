@@ -1,5 +1,5 @@
 import {authorInput, jobInput, nameInput, linkInput, submitButton, validator, renderLoading, userInfo, popup, listCard} from "./script.js"
-import {connection} from "./api.js"
+import {connection} from "../modules/api.js"
 export default class Validate {
   constructor() {
     let editForm = document.forms.edit;

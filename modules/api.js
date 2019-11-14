@@ -83,13 +83,13 @@ export class Api {
          })
     }
 }
+import serverUrl from "../src/index.js"
 
- const connection = new Api({
-    baseUrl: 'http://95.216.175.5/cohort4',
+console.log(serverUrl())
+export const connection = new Api({
+    baseUrl: serverUrl(),
     headers: {
       authorization: 'f2b2d9fc-5bcc-4fee-b5ce-de49f9685c7c',
       'Content-Type': 'application/json'
     }
-   });
-
-export {connection};
+});
