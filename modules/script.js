@@ -24,3 +24,6 @@ const popup = new Popup;
 const validator = new Validate;
 
 export {placeList, placeCard, authorInput, jobInput, nameInput, linkInput, submitButton, listCard, userInfo, popup, validator, renderLoading}
+api.loadCards();
+api.render();
+

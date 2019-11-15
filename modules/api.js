@@ -83,9 +83,8 @@ export class Api {
          })
     }
 }
-import serverUrl from "../src/index.js"
 
-console.log(serverUrl())
+import serverUrl from "../src/index.js"
 export const connection = new Api({
     baseUrl: serverUrl(),
     headers: {
