@@ -1,5 +1,6 @@
 import {connection} from "../modules/api.js";
 import {placeList} from "./script.js";
+import {listCard} from "../modules/script.js";
 import Card from "./card.js";
 export default class ListCard {
     constructor(container) {

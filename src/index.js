@@ -3,7 +3,6 @@ export default function  serverUrl() {
     return serverUrl;
 }
 import './style.css'
-import {listCard} from "../modules/script.js";
 import renderLoadnig from  "../modules/script.js";
 import initialCards from "../modules/initialcards.js";
 import ListCard from "../modules/listcard.js";
