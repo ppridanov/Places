@@ -83,6 +83,36 @@ export class Api {
             headers: this.headers,  
          })
     }
+    putLike(cardID) {
+        return fetch(`${this.baseUrl}/cards/like/${cardID}`,  {
+            method: 'PUT' ,
+            headers: this.headers, 
+         })
+         .then((res) => {
+             if (res.ok) {
+               return res.json(); 
+             }
+             return Promise.reject(`Ошибка: ${res.status}`);
+         })
+         .catch((err) => {
+            console.log(err)
+        })     
+    }
+    deleteLike(cardID) {
+        return fetch(`${this.baseUrl}/cards/like/${cardID}`,  {
+            method: 'DELETE' ,
+            headers: this.headers, 
+         })
+         .then((res) => {
+             if (res.ok) {
+               return res.json(); 
+             }
+             return Promise.reject(`Ошибка: ${res.status}`);
+         })
+         .catch((err) => {
+            console.log(err)
+        })  
+    }
 }
 
 export const connection = new Api({

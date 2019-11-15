@@ -24,11 +24,11 @@ export default class ListCard {
         .then((cards) => {
             this.arrayCard = cards; 
             this.arrayCard.forEach(function(item) {
-              const cardElement = new Card(item.name, item.link, item._id, item.owner._id);
+              const cardElement = new Card(item.name, item.link, item._id, item.owner._id, item.likes);
               placeList.appendChild(cardElement.cardContainer)
             })
         })
     }
-  }
+    }
 
   
