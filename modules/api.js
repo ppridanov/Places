@@ -85,10 +85,7 @@ export class Api {
     }
 }
 
-<<<<<<< HEAD
-=======
 import serverUrl from "../src/index.js"
->>>>>>> a6391cc3ed0979214a014cd03b032d24cb1cc9ab
 export const connection = new Api({
     baseUrl: serverUrl(),
     headers: {
