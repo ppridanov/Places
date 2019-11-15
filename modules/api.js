@@ -1,4 +1,5 @@
-import {renderLoading} from "./script.js"
+import {renderLoading} from "./script.js";
+import serverUrl from "../src/index.js";
 export class Api {
     constructor(options) {
         this.baseUrl = options.baseUrl;
@@ -83,9 +84,7 @@ export class Api {
          })
     }
 }
-import serverUrl from "../src/index.js"
 
-console.log(serverUrl())
 export const connection = new Api({
     baseUrl: serverUrl(),
     headers: {

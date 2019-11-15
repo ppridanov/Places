@@ -12,4 +12,4 @@ import Userinfo from "../modules/userinfo.js";
 import Validate from "../modules/validate.js";
 import {placeList} from "../modules/script.js";
 import {connection} from '../modules/api.js';
-listCard.render();
+

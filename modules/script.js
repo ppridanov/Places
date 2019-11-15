@@ -12,7 +12,7 @@ export default function renderLoading(isLoading) {
 }
 
 const placeList = document.querySelector('.places-list');
-const placeCard = document.querySelectorAll('.place-card__image')
+const placeCard = document.querySelectorAll('.place-card__image');
 const authorInput = document.querySelector('.popup__input_type_author');
 const jobInput = document.querySelector('.popup__input_type_job');
 const nameInput = document.querySelector('.popup__input_type_name');
@@ -23,4 +23,4 @@ const userInfo = new Userinfo;
 const popup = new Popup;
 const validator = new Validate;
 
-export {placeList, placeCard, authorInput, jobInput, nameInput, linkInput, submitButton, listCard, userInfo, popup, validator, renderLoading}
+export {placeList, placeCard, authorInput, jobInput, nameInput, linkInput, submitButton, listCard, userInfo, popup, validator, renderLoading};
