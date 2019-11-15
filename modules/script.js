@@ -2,6 +2,7 @@ import ListCard from "./listcard.js";
 import Userinfo from "./userinfo.js";
 import Popup from "./popup.js";
 import Validate from "./validate.js";
+import {connection} from "./api.js"
 export default function renderLoading(isLoading) {
   const popupButton = document.querySelector('.popup__button');
   if (isLoading) {
@@ -24,6 +25,6 @@ const popup = new Popup;
 const validator = new Validate;
 
 export {placeList, placeCard, authorInput, jobInput, nameInput, linkInput, submitButton, listCard, userInfo, popup, validator, renderLoading}
-api.loadCards();
-api.render();
+connection.loadCards();
+connection.render();
 listCard.render();
