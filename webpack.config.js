@@ -9,7 +9,7 @@ const isDev = process.env.NODE_ENV === 'development';
 
 
 module.exports = {
-    entry: { main: './src/index.js' },
+    entry: { main: './src/script.js' },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[chunkhash].js'
@@ -37,7 +37,7 @@ module: {
                  {
                      loader: 'image-webpack-loader',
                      options: { 
-                        outputPath: 'images',
+                        outputPath: 'img',
                       }
                  }
             ]

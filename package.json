@@ -1,11 +1,11 @@
 {
   "name": "places",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.2",
+  "description": "[Ссылка на мою работу](https://ppridanov.github.io/Places \"Проектная работа №11\")",
   "main": "index.js",
   "scripts": {
     "build": " cross-env process.env.NODE_ENV=production && rimraf dist && webpack --mode production",
-    "dev": "cross-env process.env.NODE_ENV=developments webpack-dev-server --mode development --open --watch",
+    "dev": "cross-env process.env.NODE_ENV=development webpack-dev-server --mode development --open --watch",
     "deploy": "cross-env process.env.NODE_ENV=production gh-pages -d dist"
   },
   "repository": {
@@ -21,7 +21,8 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "core-js": "^3.1.4",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "rimraf": "^3.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.0",
@@ -29,11 +30,11 @@
     "@babel/preset-env": "^7.7.1",
     "autoprefixer": "^9.7.1",
     "babel-loader": "^8.0.6",
-    "cross-env": "^5.1.6",
+    "cross-env": "^5.2.1",
     "css-loader": "^3.2.0",
     "cssnano": "^4.1.10",
     "file-loader": "^4.2.0",
-    "gh-pages": "~2.1.1",
+    "gh-pages": "^2.1.1",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.8.0",

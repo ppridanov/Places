@@ -1,5 +1,4 @@
-import {renderLoading} from "./script.js";
-import serverUrl from "../src/index.js";
+import {renderLoading} from "./validate.js";
 export class Api {
     constructor(options) {
         this.baseUrl = options.baseUrl;
@@ -15,10 +14,10 @@ export class Api {
                 return res.json();
             }
             return Promise.reject(`Ошибка: ${res.status}`);
-          })
-          .catch((err) => {
+            })
+            .catch((err) => {
             console.log(err);
-          })
+            })
     }
     loadCards() {
         return fetch(`${this.baseUrl}/cards`, {
@@ -32,8 +31,8 @@ export class Api {
             return Promise.reject(`Ошибка: ${res.status}`);
             })
             .catch((err) => {
-              console.log(err)
-          })     
+              console.log(err);
+            })     
     }
     editProfile(nameValue, aboutValue) {
         return fetch(`${this.baseUrl}/users/me`, {
@@ -67,54 +66,58 @@ export class Api {
                 link: linkValue
             })
          })
-         .then((res) => {
+        .then((res) => {
             if(res.ok) {
                 return res.json();
             }
             return Promise.reject(`Ошибка: ${res.status}`);
             })
             .catch((err) => {
-              console.log(err)
-          })          
+              console.log(err);
+            })          
     }
     deleteCard(cardID) {
         fetch(`${this.baseUrl}/cards/${cardID}`,  {
             method: 'DELETE' ,
             headers: this.headers,  
-         })
+        })
     }
     putLike(cardID) {
         return fetch(`${this.baseUrl}/cards/like/${cardID}`,  {
             method: 'PUT' ,
             headers: this.headers, 
-         })
-         .then((res) => {
-             if (res.ok) {
-               return res.json(); 
-             }
-             return Promise.reject(`Ошибка: ${res.status}`);
-         })
-         .catch((err) => {
-            console.log(err)
+        })
+        .then((res) => {
+            if (res.ok) {
+                return res.json(); 
+            }
+            return Promise.reject(`Ошибка: ${res.status}`);
+        })
+        .catch((err) => {
+            console.log(err);
         })     
     }
     deleteLike(cardID) {
         return fetch(`${this.baseUrl}/cards/like/${cardID}`,  {
             method: 'DELETE' ,
             headers: this.headers, 
-         })
-         .then((res) => {
-             if (res.ok) {
-               return res.json(); 
-             }
-             return Promise.reject(`Ошибка: ${res.status}`);
-         })
-         .catch((err) => {
-            console.log(err)
+        })
+        .then((res) => {
+            if (res.ok) {
+                return res.json(); 
+            }
+            return Promise.reject(`Ошибка: ${res.status}`);
+        })
+        .catch((err) => {
+            console.log(err);
         })  
     }
 }
-
+function serverUrl() {
+    const serverUrl = process.env.NODE_ENV === 'development' ? 'http://praktikum.tk/cohort4' : 'https://praktikum.tk/cohort4';
+    return serverUrl;
+}
+console.log(serverUrl())
 export const connection = new Api({
     baseUrl: serverUrl(),
     headers: {
@@ -122,3 +125,7 @@ export const connection = new Api({
       'Content-Type': 'application/json'
     }
 });
+
+connection.loadCards();
+connection.render();
+
