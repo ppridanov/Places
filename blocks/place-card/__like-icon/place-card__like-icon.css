@@ -11,6 +11,7 @@
 
 .place-card__like-icon_liked {
   background-image: url(../../../src/img/like-active.svg);
+  background-image: url(../../../images/like-active.svg);
 }
 
 .place-card__like-icon:hover {
